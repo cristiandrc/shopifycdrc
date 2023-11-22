@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Título de la Página</title>
+  </head>
+  <body>
+    <h1>{{ 'Título de la Página' }}</h1>
+
+    <!-- Botón 1 -->
+    <a href="/" class="boton">{{ 'Botón 1' }}</a>
+
+    <!-- Botón 2 -->
+
+    <a href="/" class="boton">{{ 'Botón 2test hola' }}</a>
+    {{ section.settings.desktop_content_position }}
+  </body>
+</html>
+
+{% schema %}
+{
+  "name": "rojas",
+  "tag": "section",
+  "class": "rojas",
+  "settings": [
+    {
+      "type": "select",
+      "id": "desktop_content_position",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.rich-text.settings.desktop_content_position.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.rich-text.settings.desktop_content_position.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.rich-text.settings.desktop_content_position.options__3.label"
+        }
+      ],
+      "default": "center",
+      "label": "t:sections.rich-text.settings.desktop_content_position.label",
+      "info": "t:sections.rich-text.settings.desktop_content_position.info"
+    }
+  ],
+  "presets": [
+    {
+      "name": "rojas",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}
